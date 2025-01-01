@@ -1,6 +1,14 @@
 import { Link } from 'react-router-dom';
+import { useUser } from './UserContext';
 
 function Header() {
+  const { isLogged, setIsLogged } = useUser();
+
+  const handleLogout = () => {
+    setIsLogged(false);
+    // Additional logout logic if needed
+  };
+
   return (
     <header className="App-header fixed-top">
       <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
@@ -16,9 +24,26 @@ function Header() {
             <li className="nav-item">
               <Link className="nav-link" to="/archive">Archive</Link>
             </li>
-            <li className="nav-item">
-              <Link className="nav-link" to="/account">Account</Link>
-            </li>
+            {!isLogged ? (
+              <>
+              <li className="nav-item">
+                <Link className="nav-link" to="/account">Login</Link>
+              </li>
+              <li className="nav-item">
+                <Link className="nav-link" to="/register">Register</Link>
+              </li>
+              </>
+            ) : (
+              <li className="nav-item">
+              <button
+                className="btn btn-link nav-link"
+                style={{ textDecoration: 'none' }}
+                onClick={handleLogout}
+              >
+                Logout
+              </button>
+              </li>
+            )}
           </ul>
         </div>
       </nav>
