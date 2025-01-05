@@ -57,9 +57,9 @@ const Home: React.FC = () => {
               <p className="card-text">
                 Stay updated with new features and improvements posted on Github
               </p>
-              <Link to="https://github.com/haarmeggido" className="btn btn-success">
+              <a href="https://github.com/haarmeggido" className="btn btn-success" target="_blank" rel="noopener noreferrer">
                 Go to Github
-              </Link>
+              </a>
             </div>
           </div>
         </div>
