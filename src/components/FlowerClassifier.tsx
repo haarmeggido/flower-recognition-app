@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect } from "react";
+import React, { useState, useRef,  } from "react";
 import styles from "./FlowerClassifier.module.css";
 import FlowerInfoModal from "./FlowerInfoModal";
 import flowerData from "../data/flowers.json";
@@ -50,7 +50,7 @@ const FlowerClassifier: React.FC = () => {
       const data = await response.json();
       const { predicted_label, predicted_class } = data;
   
-      setResult(`Predicted Class: ${predicted_label}`);
+      setResult(`Recognized flower: ${predicted_label}`);
       const flower = flowerData.find((item) => item.class === predicted_label);
   
       if (flower) {

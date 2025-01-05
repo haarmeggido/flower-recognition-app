@@ -1,6 +1,35 @@
 import React, { useState, useEffect } from "react";
 import { useUser } from "./UserContext";
 
+const labels: any = {
+  0: "bluebell",
+  1: "buttercup",
+  2: "colts_foot",
+  3: "corn_poppy",
+  4: "cowslip",
+  5: "crocus",
+  6: "daffodil",
+  7: "daisy",
+  8: "dandelion",
+  9: "foxglove",
+  10: "fritillary",
+  11: "geranium",
+  12: "hibiscus",
+  13: "iris",
+  14: "lily_valley",
+  15: "pansy",
+  16: "petunia",
+  17: "rose",
+  18: "snowdrop",
+  19: "sunflower",
+  20: "tigerlily",
+  21: "tulip",
+  22: "wallflower",
+  23: "water_lily",
+  24: "wild_tulip",
+  25: "windflower",
+};
+
 const Profile: React.FC = () => {
   const { fetchUserData, updateUserDetails } = useUser();
   const [userData, setUserData] = useState<any | null>(null);
@@ -9,6 +38,7 @@ const Profile: React.FC = () => {
   const [showEmailUpdate, setShowEmailUpdate] = useState(false);
   const [showResetData, setShowResetData] = useState(false);
   const [showResetConfirmation, setShowResetConfirmation] = useState(false);
+  const [showFlowerList, setShowFlowerList] = useState(false);
 
   useEffect(() => {
     const loadUserData = async () => {
@@ -50,9 +80,26 @@ const Profile: React.FC = () => {
     }
   };
 
+  const getFlowerStatus = () => {
+    const acquired = [];
+    const remaining = [];
+
+    for (let i = 0; i < Object.keys(labels).length; i++) {
+      if ((userData.flower_mask & (1 << i)) !== 0) {
+        acquired.push(labels[i]);
+      } else {
+        remaining.push(labels[i]);
+      }
+    }
+
+    return { acquired, remaining };
+  };
+
   if (!userData) {
     return <p>Loading profile...</p>;
   }
+
+  const flowerStatus = getFlowerStatus();
 
   return (
     <div className="container mt-4">
@@ -62,7 +109,32 @@ const Profile: React.FC = () => {
           <h3 className="card-title">Your Statistics</h3>
           <p className="card-text"><strong>Total Recognitions:</strong> {userData.total_recognitions}</p>
           <p className="card-text"><strong>Unique Recognitions:</strong> {userData.unique_recognitions}</p>
-          <p className="card-text"><strong>Flower Mask:</strong> {userData.flower_mask}</p>
+          
+          {/* Expandable Flower Mask */}
+          <div>
+            <button
+              className="btn btn-link  p-0"
+              onClick={() => setShowFlowerList(!showFlowerList)}
+            >
+              <strong>Acquired flowers:</strong> {showFlowerList ? "Hide Details" : "Show Details"}
+            </button>
+            {showFlowerList && (
+                <div className="mt-2">
+                <h5>Acquired Flowers</h5>
+                <ul className="list-group">
+                  {flowerStatus.acquired.map((flower) => (
+                  <li key={flower} className="list-group-item">{flower}</li>
+                  ))}
+                </ul>
+                <h5 className="mt-3">Remaining Flowers</h5>
+                <ul className="list-group">
+                  {flowerStatus.remaining.map((flower) => (
+                  <li key={flower} className="list-group-item">{flower}</li>
+                  ))}
+                </ul>
+                </div>
+            )}
+          </div>
         </div>
       </div>
 

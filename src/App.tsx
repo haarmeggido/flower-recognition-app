@@ -1,11 +1,9 @@
 import React from "react";
 import FlowerClassifier from "./components/FlowerClassifier";
 import 'bootstrap/dist/css/bootstrap.css';
-import { useState } from 'react';
-import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route,  } from 'react-router-dom';
 import Header from './components/Header';
 import Footer from './components/Footer';
-import Placeholder from './components/Placeholder';
 import Login from "./components/Login";
 import Register from "./components/Register";
 import PrivateRoute from "./components/PrivateRoute";

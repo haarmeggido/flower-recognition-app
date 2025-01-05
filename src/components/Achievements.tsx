@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useContext } from "react";
+import React, { useState, useEffect,  } from "react";
 import { useUser } from "./UserContext";
 import achievementsData from "../data/achievements.json"; // Place your achievements JSON here
 
@@ -7,7 +7,7 @@ const Achievements: React.FC = () => {
   const [unlockedAchievements, setUnlockedAchievements] = useState<any[]>([]);
   const [lockedAchievements, setLockedAchievements] = useState<any[]>([]);
 
-  const { fetchUserData, updateUserDetails } = useUser();
+  const { fetchUserData,  } = useUser();
 
   useEffect(() => {
     const fetchAndSetUserData = async () => {
