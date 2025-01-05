@@ -1,0 +1,62 @@
+[
+  {
+    "name": "First Bloom",
+    "description": "Recognize your first flower.",
+    "icon": "🌼",
+    "condition": { "total_recognitions": 1 }
+  },
+  {
+    "name": "Blossoming Expert",
+    "description": "Recognize 10 flowers.",
+    "icon": "🌸",
+    "condition": { "total_recognitions": 10 }
+  },
+  {
+    "name": "Garden Master",
+    "description": "Recognize 50 flowers.",
+    "icon": "🏵️",
+    "condition": { "total_recognitions": 50 }
+  },
+  {
+    "name": "Flower Enthusiast",
+    "description": "Identify 5 unique flower types.",
+    "icon": "🌺",
+    "condition": { "unique_recognitions": 5 }
+  },
+  {
+    "name": "Botanical Connoisseur",
+    "description": "Identify 15 unique flower types.",
+    "icon": "🌷",
+    "condition": { "unique_recognitions": 15 }
+  },
+  {
+    "name": "Rose Whisperer",
+    "description": "Recognize a rose.",
+    "icon": "🌹",
+    "condition": { "flower_mask": { "bit": 17 } }
+  },
+  {
+    "name": "Daisy Discoverer",
+    "description": "Recognize a daisy.",
+    "icon": "🌼",
+    "condition": { "flower_mask": { "bit": 7 } }
+  },
+  {
+    "name": "Sunflower Seeker",
+    "description": "Recognize a sunflower.",
+    "icon": "🌻",
+    "condition": { "flower_mask": { "bit": 19 } }
+  },
+  {
+    "name": "Field Botanist",
+    "description": "Identify 25 unique flower types.",
+    "icon": "🏕️",
+    "condition": { "unique_recognitions": 25 }
+  },
+  {
+    "name": "Blooming Genius",
+    "description": "Recognize every flower in the dataset.",
+    "icon": "🌟",
+    "condition": { "unique_recognitions": 26 }
+  }
+]

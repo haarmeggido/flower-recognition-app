@@ -9,6 +9,8 @@ import Placeholder from './components/Placeholder';
 import Login from "./components/Login";
 import Register from "./components/Register";
 import PrivateRoute from "./components/PrivateRoute";
+import Profile from "./components/Profile";
+import Achievements from "./components/Achievements";
 
 const App: React.FC = () => {
   return (
@@ -18,12 +20,12 @@ const App: React.FC = () => {
         <main className="mt-5 pt-4">
           <Routes>
             <Route path="/classifier" element={<FlowerClassifier />} />
-            <Route path="/archive" element={<Placeholder title="Archive" />} />
+            <Route path="/achievements" element={<Achievements  />} />
             <Route
               path="/account"
               element={
                 <PrivateRoute>
-                  <Placeholder title="Account" />
+                  <Profile />
                 </PrivateRoute>
               }
             />

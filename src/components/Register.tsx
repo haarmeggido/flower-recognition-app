@@ -9,7 +9,7 @@ const Register: React.FC = () => {
 
   const handleRegister = async () => {
     try {
-      const response = await fetch("http://127.0.0.1:8080/register", {
+      const response = await fetch("http://127.0.0.1:8080/auth/register", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ username, password }),
@@ -26,26 +26,38 @@ const Register: React.FC = () => {
   };
 
   return (
-    <div className="register-container">
-      <h2>Register</h2>
-      {error && <p style={{ color: "red" }}>{error}</p>}
-      <div>
-        <label>Username:</label>
-        <input
-          type="text"
-          value={username}
-          onChange={(e) => setUsername(e.target.value)}
-        />
+    <div className="container mt-5">
+      <div className="row justify-content-center">
+        <div className="col-md-12">
+          <div className="card">
+            <div className="card-body">
+              <h2 className="card-title text-center">Register</h2>
+              {error && <div className="alert alert-danger">{error}</div>}
+              <div className="form-group">
+                <label>Username:</label>
+                <input
+                  type="text"
+                  className="form-control"
+                  value={username}
+                  onChange={(e) => setUsername(e.target.value)}
+                />
+              </div>
+              <div className="form-group">
+                <label>Password:</label>
+                <input
+                  type="password"
+                  className="form-control"
+                  value={password}
+                  onChange={(e) => setPassword(e.target.value)}
+                />
+              </div>
+              <button className="btn btn-primary btn-block mt-3" onClick={handleRegister}>
+                Register
+              </button>
+            </div>
+          </div>
+        </div>
       </div>
-      <div>
-        <label>Password:</label>
-        <input
-          type="password"
-          value={password}
-          onChange={(e) => setPassword(e.target.value)}
-        />
-      </div>
-      <button onClick={handleRegister}>Register</button>
     </div>
   );
 };
