@@ -56,9 +56,11 @@ const Register: React.FC = () => {
               </button>
             </div>
           </div>
+        <div className="text-center mt-3"></div>
+            <p>Already have an account? <button className="btn btn-link" onClick={() => navigate("/login")}>Log In here</button></p>
+          </div>
         </div>
       </div>
-    </div>
   );
 };
 

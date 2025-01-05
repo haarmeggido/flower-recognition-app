@@ -60,9 +60,12 @@ const Login: React.FC = () => {
               </button>
             </div>
           </div>
+          <div className="text-center mt-3"></div>
+            <p>Don't have an account? <button className="btn btn-link" onClick={() => navigate("/register")}>Register here</button></p>
+          </div>
         </div>
       </div>
-    </div>
+    
   );
 };
 

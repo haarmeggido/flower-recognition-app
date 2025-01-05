@@ -7,7 +7,7 @@ function Header() {
   return (
     <header className="App-header fixed-top">
       <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
-        <h1 className="navbar-brand">Flower Classifier</h1>
+        <h1 className="navbar-brand">Flower Recognition App</h1>
         <div className="collapse navbar-collapse justify-content-end">
           <ul className="navbar-nav">
             <li className="nav-item">

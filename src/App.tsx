@@ -11,6 +11,7 @@ import Register from "./components/Register";
 import PrivateRoute from "./components/PrivateRoute";
 import Profile from "./components/Profile";
 import Achievements from "./components/Achievements";
+import Home from "./components/Home";
 
 const App: React.FC = () => {
   return (
@@ -20,7 +21,10 @@ const App: React.FC = () => {
         <main className="mt-5 pt-4">
           <Routes>
             <Route path="/classifier" element={<FlowerClassifier />} />
-            <Route path="/achievements" element={<Achievements  />} />
+            <Route path="/achievements" element={                 <PrivateRoute>
+                  <Achievements />
+                </PrivateRoute>} 
+                />
             <Route
               path="/account"
               element={
@@ -31,7 +35,7 @@ const App: React.FC = () => {
             />
             <Route path="/login" element={<Login />} />
             <Route path="/register" element={<Register />} />
-            <Route path="/" element={<Placeholder title="Home" />} />
+            <Route path="/" element={<Home  />} />
           </Routes>
         </main>
         <Footer />
