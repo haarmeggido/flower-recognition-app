@@ -1,0 +1,288 @@
+[
+  {
+    "class": "bluebell",
+    "name": "Bluebell",
+    "scientific_name": "Hyacinthoides non-scripta",
+    "description": "Bluebells are enchanting flowers known for their vivid blue color, carpeting woodland floors in spring.",
+    "additional_info": {
+      "family": "Asparagaceae",
+      "height": "20–50 cm",
+      "habitat": "Shaded woodlands"
+    }
+  },
+  {
+    "class": "buttercup",
+    "name": "Buttercup",
+    "scientific_name": "Ranunculus",
+    "description": "Buttercups are bright yellow flowers that add a splash of sunshine to meadows and grassy areas.",
+    "additional_info": {
+      "family": "Ranunculaceae",
+      "height": "10–60 cm",
+      "habitat": "Grasslands and meadows"
+    }
+  },
+  {
+    "class": "colts_foot",
+    "name": "Coltsfoot",
+    "scientific_name": "Tussilago farfara",
+    "description": "Coltsfoot is a perennial herb with bright yellow flowers, often blooming before its leaves appear.",
+    "additional_info": {
+      "family": "Asteraceae",
+      "height": "5–30 cm",
+      "habitat": "Riverbanks and roadsides"
+    }
+  },
+  {
+    "class": "corn_poppy",
+    "name": "Corn Poppy",
+    "scientific_name": "Papaver rhoeas",
+    "description": "Corn poppies are vibrant red flowers, often seen in fields and associated with remembrance.",
+    "additional_info": {
+      "family": "Papaveraceae",
+      "height": "25–90 cm",
+      "habitat": "Open fields and meadows"
+    }
+  },
+  {
+    "class": "cowslip",
+    "name": "Cowslip",
+    "scientific_name": "Primula veris",
+    "description": "Cowslips are delicate yellow flowers found in grasslands, beloved for their sweet fragrance.",
+    "additional_info": {
+      "family": "Primulaceae",
+      "height": "10–30 cm",
+      "habitat": "Grasslands and meadows"
+    }
+  },
+  {
+    "class": "crocus",
+    "name": "Crocus",
+    "scientific_name": "Crocus sativus",
+    "description": "Crocuses are small, colorful flowers that bloom in early spring, symbolizing renewal and cheer.",
+    "additional_info": {
+      "family": "Iridaceae",
+      "height": "5–15 cm",
+      "habitat": "Gardens and alpine regions"
+    }
+  },
+  {
+    "class": "daffodil",
+    "name": "Daffodil",
+    "scientific_name": "Narcissus",
+    "description": "Daffodils are cheerful yellow flowers that herald the arrival of spring, symbolizing rebirth.",
+    "additional_info": {
+      "family": "Amaryllidaceae",
+      "height": "30–50 cm",
+      "habitat": "Gardens and woodlands"
+    }
+  },
+  {
+    "class": "daisy",
+    "name": "Daisy",
+    "scientific_name": "Bellis perennis",
+    "description": "Daisies are simple, cheerful flowers with white petals and a yellow center, symbolizing innocence.",
+    "additional_info": {
+      "family": "Asteraceae",
+      "height": "2–10 cm",
+      "habitat": "Meadows and lawns"
+    }
+  },
+  {
+    "class": "dandelion",
+    "name": "Dandelion",
+    "scientific_name": "Taraxacum",
+    "description": "Dandelions are resilient yellow flowers that transform into iconic puffballs, enjoyed by children and pollinators.",
+    "additional_info": {
+      "family": "Asteraceae",
+      "height": "10–30 cm",
+      "habitat": "Lawns and roadsides"
+    }
+  },
+  {
+    "class": "foxglove",
+    "name": "Foxglove",
+    "scientific_name": "Digitalis purpurea",
+    "description": "Foxgloves are tall, tubular flowers that bloom in shades of purple, pink, and white, attracting pollinators.",
+    "additional_info": {
+      "family": "Plantaginaceae",
+      "height": "1–2 meters",
+      "habitat": "Woodlands and gardens"
+    }
+  },
+  {
+    "class": "fritillary",
+    "name": "Fritillary",
+    "scientific_name": "Fritillaria meleagris",
+    "description": "Fritillaries are elegant bell-shaped flowers, often patterned with checkerboard-like markings.",
+    "additional_info": {
+      "family": "Liliaceae",
+      "height": "15–40 cm",
+      "habitat": "Meadows and wetlands"
+    }
+  },
+  {
+    "class": "geranium",
+    "name": "Geranium",
+    "scientific_name": "Geranium",
+    "description": "Geraniums are versatile flowers available in various colors, often found in gardens and pots.",
+    "additional_info": {
+      "family": "Geraniaceae",
+      "height": "20–60 cm",
+      "habitat": "Gardens and meadows"
+    }
+  },
+  {
+    "class": "hibiscus",
+    "name": "Hibiscus",
+    "scientific_name": "Hibiscus rosa-sinensis",
+    "description": "Hibiscus flowers are large and showy, often associated with tropical climates and vibrant beauty.",
+    "additional_info": {
+      "family": "Malvaceae",
+      "height": "1–3 meters",
+      "habitat": "Tropical and subtropical regions"
+    }
+  },
+  {
+    "class": "iris",
+    "name": "Iris",
+    "scientific_name": "Iris",
+    "description": "Irises are elegant flowers named after the Greek goddess of the rainbow, available in a variety of colors.",
+    "additional_info": {
+      "family": "Iridaceae",
+      "height": "30–90 cm",
+      "habitat": "Gardens and wetlands"
+    }
+  },
+  {
+    "class": "lily_valley",
+    "name": "Lily of the Valley",
+    "scientific_name": "Convallaria majalis",
+    "description": "Lily of the Valley is a fragrant, bell-shaped flower symbolizing purity and humility.",
+    "additional_info": {
+      "family": "Asparagaceae",
+      "height": "15–25 cm",
+      "habitat": "Shaded woodlands"
+    }
+  },
+  {
+    "class": "pansy",
+    "name": "Pansy",
+    "scientific_name": "Viola tricolor",
+    "description": "Pansies are cheerful flowers with vibrant, velvety petals, often blooming in cooler seasons.",
+    "additional_info": {
+      "family": "Violaceae",
+      "height": "15–20 cm",
+      "habitat": "Gardens and borders"
+    }
+  },
+  {
+    "class": "petunia",
+    "name": "Petunia",
+    "scientific_name": "Petunia",
+    "description": "Petunias are popular garden flowers with trumpet-shaped blooms available in a wide range of colors.",
+    "additional_info": {
+      "family": "Solanaceae",
+      "height": "15–30 cm",
+      "habitat": "Gardens and planters"
+    }
+  },
+  {
+    "class": "rose",
+    "name": "Rose",
+    "scientific_name": "Rosa",
+    "description": "Roses are iconic flowers symbolizing love and beauty, admired for their colors and fragrance.",
+    "additional_info": {
+      "family": "Rosaceae",
+      "height": "0.5–2 meters",
+      "habitat": "Gardens and wild bushes"
+    }
+  },
+  {
+    "class": "snowdrop",
+    "name": "Snowdrop",
+    "scientific_name": "Galanthus",
+    "description": "Snowdrops are delicate white flowers that bloom in late winter, symbolizing hope and renewal.",
+    "additional_info": {
+      "family": "Amaryllidaceae",
+      "height": "10–15 cm",
+      "habitat": "Woodlands and gardens"
+    }
+  },
+  {
+    "class": "sunflower",
+    "name": "Sunflower",
+    "scientific_name": "Helianthus annuus",
+    "description": "Sunflowers are tall, vibrant flowers known for their bright yellow petals and seed-filled heads.",
+    "additional_info": {
+      "family": "Asteraceae",
+      "height": "1.5–3.5 meters",
+      "habitat": "Open fields and gardens"
+    }
+  },
+  {
+    "class": "tigerlily",
+    "name": "Tiger Lily",
+    "scientific_name": "Lilium lancifolium",
+    "description": "Tiger lilies are bright orange flowers with black spots, symbolizing wealth and prosperity.",
+    "additional_info": {
+      "family": "Liliaceae",
+      "height": "80–150 cm",
+      "habitat": "Gardens and woodlands"
+    }
+  },
+  {
+    "class": "tulip",
+    "name": "Tulip",
+    "scientific_name": "Tulipa",
+    "description": "Tulips are classic spring flowers, admired for their cup-shaped blooms in a rainbow of colors.",
+    "additional_info": {
+      "family": "Liliaceae",
+      "height": "20–70 cm",
+      "habitat": "Gardens and parks"
+    }
+  },
+  {
+    "class": "wallflower",
+    "name": "Wallflower",
+    "scientific_name": "Erysimum cheiri",
+    "description": "Wallflowers are fragrant flowers often grown in gardens, available in warm, sunset-like colors.",
+    "additional_info": {
+      "family": "Brassicaceae",
+      "height": "30–70 cm",
+      "habitat": "Gardens and rocky areas"
+    }
+  },
+  {
+    "class": "water_lily",
+    "name": "Water Lily",
+    "scientific_name": "Nymphaea",
+    "description": "Water lilies are floating aquatic flowers, admired for their serene beauty and symbolism in art.",
+    "additional_info": {
+      "family": "Nymphaeaceae",
+      "height": "Floating",
+      "habitat": "Ponds and lakes"
+    }
+  },
+  {
+    "class": "wild_tulip",
+    "name": "Wild Tulip",
+    "scientific_name": "Tulipa sylvestris",
+    "description": "Wild tulips are smaller, delicate versions of their cultivated cousins, found in natural meadows.",
+    "additional_info": {
+      "family": "Liliaceae",
+      "height": "15–30 cm",
+      "habitat": "Meadows and hillsides"
+    }
+  },
+  {
+    "class": "windflower",
+    "name": "Windflower",
+    "scientific_name": "Anemone nemorosa",
+    "description": "Windflowers are dainty white or pink blooms swaying in the breeze, symbolizing anticipation.",
+    "additional_info": {
+      "family": "Ranunculaceae",
+      "height": "10–30 cm",
+      "habitat": "Woodlands and grasslands"
+    }
+  }
+]
