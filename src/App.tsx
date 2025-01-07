@@ -14,15 +14,19 @@ import Home from "./components/Home";
 const App: React.FC = () => {
   return (
     <Router>
-      <div className="app">
+      <div className="app d-flex flex-column min-vh-100">
         <Header />
-        <main className="mt-5 pt-4">
+        <main className="flex-grow-1 py-5">
           <Routes>
             <Route path="/classifier" element={<FlowerClassifier />} />
-            <Route path="/achievements" element={                 <PrivateRoute>
+            <Route
+              path="/achievements"
+              element={
+                <PrivateRoute>
                   <Achievements />
-                </PrivateRoute>} 
-                />
+                </PrivateRoute>
+              }
+            />
             <Route
               path="/account"
               element={
@@ -33,14 +37,15 @@ const App: React.FC = () => {
             />
             <Route path="/login" element={<Login />} />
             <Route path="/register" element={<Register />} />
-            <Route path="/" element={<Home  />} />
+            <Route path="/" element={<Home />} />
           </Routes>
         </main>
         <Footer />
       </div>
     </Router>
   );
-}
+};
 
 export default App;
+
 
