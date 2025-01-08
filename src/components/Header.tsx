@@ -9,9 +9,10 @@ function Header() {
   const handleNavCollapse = () => setIsNavCollapsed(!isNavCollapsed);
 
   return (
-    <header className="App-header fixed-top">
+    <header className="App-header fixed-top px-3 border-bottom border-dark">
       <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
-        <h1 className="navbar-brand">Flower Recognition App</h1>
+          <img src="./src/assets/utils/webpage_icon_transparent.png" alt="Logo" className="navbar-brand" style={{ width: '40px', height: '40px' }} />
+          <h1 className="navbar-brand">Flower Recognition App</h1>
         <button
           className="navbar-toggler"
           type="button"
