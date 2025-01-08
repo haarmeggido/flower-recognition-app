@@ -97,7 +97,7 @@ The Flower Recognition App provides an intuitive and interactive platform for cl
 
 Watch the video below to see how the user interface navigation works in the app.
 
-[![UI Navigation Video](./src/assets/videos/video_thumbnail.png)](./src/assets/videos/ui_navigation.mp4)**
+**[![UI Navigation Video](./src/assets/videos/video_thumbnail.png)](./src/assets/videos/ui_navigation.mp4)**
 
 ---
 
