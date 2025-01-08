@@ -93,6 +93,14 @@ The Flower Recognition App provides an intuitive and interactive platform for cl
 
 ---
 
+### **UI Navigation Video**
+
+Watch the video below to see how the user interface navigation works in the app.
+
+[![UI Navigation Video](./src/assets/videos/video_thumbnail.png)](./src/assets/videos/ui_navigation.mp4)**
+
+---
+
 ## **Tech Stack**  
 - **Frontend**: React.js, TypeScript, Bootstrap  
 - **Routing**: React Router  
