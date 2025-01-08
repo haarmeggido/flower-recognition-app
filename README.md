@@ -1,76 +1,40 @@
-
-# Flower Recognition App 🌸
-
-The **Flower Recognition App** is a user-friendly React application designed to classify flowers, track user achievements, and manage personal profiles. The app offers a smooth user experience with protected routes, a visually appealing design, and support for user authentication.
-
-## Features
-
-- **Flower Classification**: Identify flowers using the in-app classifier.
-- **Achievements System**: Track and display user achievements.
-- **Profile Management**: Manage user details and view account statistics.
-- **User Authentication**: Register and log in to access protected features.
-- **Responsive Design**: Fully optimized for mobile and desktop views.
+# Flower Recognition App 🌸  
+**A React-based web application for flower classification, user profile management, and achievement tracking.**  
 
 ---
 
-## Installation
-
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/your-repository/flower-recognition-app.git
-   ```
-2. Navigate into the project directory:
-   ```bash
-   cd flower-recognition-app
-   ```
-3. Install dependencies:
-   ```bash
-   npm install
-   ```
-4. Start the development server:
-   ```bash
-   npm start
-   ```
+## **Table of Contents**  
+1. [Introduction](#introduction)  
+2. [Features](#features)  
+3. [Navigation](#navigation)  
+4. [Tech Stack](#tech-stack)  
+5. [Installation and Setup](#installation-and-setup)  
+6. [Usage](#usage)  
+7. [Project Structure](#project-structure)
+8. [Setup Notes](#setup-notes)
+9. [License](#license)  
 
 ---
 
-## File Structure
-
-```
-flower-recognition-app/
-├── 📁src
-│   ├── App.tsx
-│   ├── 📁assets
-│   │   ├── 📁flower_icons
-│   │   │   └── (bluebell.jpg, [...])
-│   │   ├── 📁utils
-│   │   │   └── webpage_icon.png
-│   ├── 📁components
-│   │   ├── Achievements.tsx
-│   │   ├── FlowerClassifier.tsx
-│   │   ├── FlowerInfoModal.tsx
-│   │   ├── Footer.tsx
-│   │   ├── Header.tsx
-│   │   ├── Home.tsx
-│   │   ├── Login.tsx
-│   │   ├── PrivateRoute.tsx
-│   │   ├── Profile.tsx
-│   │   ├── Register.tsx
-│   │   ├── UserContext.tsx
-│   ├── 📁data
-│   │   ├── achievements.json
-│   │   ├── flowers.json
-│   ├── main.tsx
-├── .gitignore
-├── LICENSE
-├── package-lock.json
-├── package.json
-├── README.md
-```
+## **Introduction**  
+The Flower Recognition App provides an intuitive and interactive platform for classifying flowers, managing user profiles, and tracking achievements. It incorporates responsive design, modular architecture, and secure authentication to deliver a seamless user experience.  
 
 ---
 
-## Navigation
+## **Features**  
+### **Core Functionality**  
+- **Flower Classifier**: Upload images to identify flowers using a server-side API and view detailed information about each flower.  
+- **User Management**: Secure login, registration, and profile updates.  
+- **Achievements System**: Unlock achievements based on recognition milestones and flower types.  
+
+### **Additional Features**  
+- **Dynamic Modal**: Displays flower details, including scientific names and habitat.  
+- **Protected Routes**: Ensures secure access to user profiles and achievements.  
+- **Responsive Design**: Optimized for all devices using Bootstrap.  
+
+---
+
+## **Navigation**  
 
 ### Home Page
 ![obraz](https://github.com/user-attachments/assets/99c1f0bc-8861-437e-8378-77fb41fa9128)
@@ -129,12 +93,100 @@ flower-recognition-app/
 
 ---
 
-## Technologies Used
+## **Tech Stack**  
+- **Frontend**: React.js, TypeScript, Bootstrap  
+- **Routing**: React Router  
+- **State Management**: React Context API  
+- **Backend Integration**: REST API for authentication and flower classification  
 
-- **React**: For building the user interface.
-- **TypeScript**: To ensure type safety.
-- **React Router**: For navigation and route protection.
-- **Bootstrap**: For responsive design and styling.
+---
+
+## **Installation and Setup**  
+
+### **Prerequisites**  
+Ensure you have the following installed on your system:  
+- [Node.js](https://nodejs.org/) (v14+ recommended)  
+- npm or yarn  
+
+### **Steps**  
+### **Clone the repository**:  
+   ```bash  
+   git clone https://github.com/your-username/flower-recognition-app.git  
+   cd flower-recognition-app  
+  ```
+
+## **Installation**  
+
+### **Install Dependencies**  
+Run the following command to install the required packages:  
+```bash  
+npm install  
+```
+
+### Start the development server:
+```bash
+    npm start  
+```
+    Open your browser and navigate to http://localhost:3000.
+
+## **Usage**  
+### **Navigation**  
+- **Home**: Overview and navigation links to core features.  
+- **Classifier**: Upload images to classify flowers.  
+- **Login/Register**: Access user-specific features.  
+- **Achievements**: Track progress and unlocked achievements (requires login).  
+- **Profile**: Manage user data (requires login).  
+
+---
+
+## Project Structure
+
+```
+flower-recognition-app/
+├── 📁src
+│   ├── App.tsx
+│   ├── 📁assets
+│   │   ├── 📁flower_icons
+│   │   │   └── (bluebell.jpg, [...])
+│   │   ├── 📁utils
+│   │   │   └── webpage_icon.png
+│   ├── 📁components
+│   │   ├── Achievements.tsx
+│   │   ├── FlowerClassifier.tsx
+│   │   ├── FlowerInfoModal.tsx
+│   │   ├── Footer.tsx
+│   │   ├── Header.tsx
+│   │   ├── Home.tsx
+│   │   ├── Login.tsx
+│   │   ├── PrivateRoute.tsx
+│   │   ├── Profile.tsx
+│   │   ├── Register.tsx
+│   │   ├── UserContext.tsx
+│   ├── 📁data
+│   │   ├── achievements.json
+│   │   ├── flowers.json
+│   ├── main.tsx
+├── .gitignore
+├── LICENSE
+├── package-lock.json
+├── package.json
+├── README.md
+```
+
+
+
+### Explanation of Key Files and Folders:
+
+- **`src/`**: Contains all the main application code including components, assets, and styles.
+- **`assets/`**: Stores all images, icons, and other static resources.
+- **`components/`**: Houses all React components such as `Home.tsx`, `FlowerClassifier.tsx`, `Profile.tsx`, etc.
+- **`data/`**: Contains JSON files with static data like flower information and achievements.
+- **`main.tsx`**: The entry point of the application, where the root React component is rendered.
+- **`index.css`**: Global CSS styles applied to the app.
+- **`package.json`**: The npm configuration file that defines dependencies and project scripts.
+- **`README.md`**: The project's readme file with details on installation, setup, and usage.
+- **`vite.config.ts`**: Configuration file for Vite, the build tool used in this project.
+
 
 ---
 
@@ -145,6 +197,8 @@ flower-recognition-app/
 
 ---
 
-## License
+## **License**
 
-This project is licensed under the [MIT License](./LICENSE).
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.  
+
+---
