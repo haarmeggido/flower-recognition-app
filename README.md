@@ -140,7 +140,7 @@ flower-recognition-app/
 
 ## Setup Notes
 
-- The app requires a backend server for authentication endpoints (`/auth/login` and `/auth/register`).
+- The app requires a backend server with a loaded ML model for authentication (`/auth/login`, `/auth/register`), user (`/user/fetch_data`, `/user/update`), and prediction endpoints (`/predict`)
 - Ensure CORS settings are properly configured if running the backend locally.
 
 ---
