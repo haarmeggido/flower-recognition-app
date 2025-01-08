@@ -38,7 +38,7 @@ const Profile: React.FC = () => {
   const [showEmailUpdate, setShowEmailUpdate] = useState(false);
   const [showResetData, setShowResetData] = useState(false);
   const [showResetConfirmation, setShowResetConfirmation] = useState(false);
-  const [showFlowerList, setShowFlowerList] = useState(false);
+  const [showFlowerModal, setShowFlowerModal] = useState(false);
 
   useEffect(() => {
     const loadUserData = async () => {
@@ -96,7 +96,7 @@ const Profile: React.FC = () => {
   };
 
   if (!userData) {
-    return <p>Loading profile...</p>;
+    return <p className = "p-5">Loading profile...</p>;
   }
 
   const flowerStatus = getFlowerStatus();
@@ -110,33 +110,73 @@ const Profile: React.FC = () => {
           <p className="card-text"><strong>Total Recognitions:</strong> {userData.total_recognitions}</p>
           <p className="card-text"><strong>Unique Recognitions:</strong> {userData.unique_recognitions}</p>
           
-          {/* Expandable Flower Mask */}
           <div>
             <button
-              className="btn btn-link  p-0"
-              onClick={() => setShowFlowerList(!showFlowerList)}
+              className="btn btn-link p-0"
+              onClick={() => setShowFlowerModal(true)}
             >
-              <strong>Acquired flowers:</strong> {showFlowerList ? "Hide Details" : "Show Details"}
+              <strong>Acquired flowers:</strong> View List
             </button>
-            {showFlowerList && (
-                <div className="mt-2">
-                <h5>Acquired Flowers</h5>
-                <ul className="list-group">
-                  {flowerStatus.acquired.map((flower) => (
-                  <li key={flower} className="list-group-item">{flower}</li>
-                  ))}
-                </ul>
-                <h5 className="mt-3">Remaining Flowers</h5>
-                <ul className="list-group">
-                  {flowerStatus.remaining.map((flower) => (
-                  <li key={flower} className="list-group-item">{flower}</li>
-                  ))}
-                </ul>
-                </div>
-            )}
           </div>
         </div>
       </div>
+
+      {/* Modal for Flower List */}
+      {showFlowerModal && (
+        <div className="modal show d-block" tabIndex={-1} role="dialog">
+          <div className="modal-dialog modal-lg" role="document">
+            <div className="modal-content">
+              <div className="modal-header">
+                <h5 className="modal-title">Flower List</h5>
+                <button
+                  type="button"
+                  className="btn-close"
+                  onClick={() => setShowFlowerModal(false)}
+                ></button>
+              </div>
+              <div className="modal-body">
+                {/* Acquired Flowers Section */}
+                <h5>Acquired Flowers</h5>
+                {flowerStatus.acquired.length > 0 ? (
+                  <div className="row">
+                    {flowerStatus.acquired.map((flower) => (
+                      <div className="col-6 col-md-4 col-lg-3 mb-2" key={flower}>
+                        <div className="p-2 border rounded">{flower}</div>
+                      </div>
+                    ))}
+                  </div>
+                ) : (
+                  <p className="text-muted">No Flowers Acquired</p>
+                )}
+
+                {/* Remaining Flowers Section */}
+                <h5 className="mt-4">Remaining Flowers</h5>
+                {flowerStatus.remaining.length > 0 ? (
+                  <div className="row">
+                    {flowerStatus.remaining.map((flower) => (
+                      <div className="col-6 col-md-4 col-lg-3 mb-2" key={flower}>
+                        <div className="p-2 border rounded">{flower}</div>
+                      </div>
+                    ))}
+                  </div>
+                ) : (
+                  <p className="text-muted">All Flowers Acquired</p>
+                )}
+              </div>
+              <div className="modal-footer">
+                <button
+                  type="button"
+                  className="btn btn-secondary"
+                  onClick={() => setShowFlowerModal(false)}
+                >
+                  Close
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
+
 
       {/* Email Update */}
       <div className="form-check mt-3">

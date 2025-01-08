@@ -1,4 +1,5 @@
 import { createContext, useContext, useEffect, useState, ReactNode } from 'react';
+import { jwtDecode, JwtPayload } from 'jwt-decode';
 
 interface UserContextType {
   isLogged: boolean;
@@ -15,12 +16,35 @@ interface UserContextType {
 
 const UserContext = createContext<UserContextType | undefined>(undefined);
 
+const isTokenExpired = (token: string) => {
+  try {
+    const decoded = jwtDecode<JwtPayload>(token);
+    if (decoded.exp) {
+      const now = Math.floor(Date.now() / 1000);
+      return decoded.exp < now;
+    }
+    return true; // If no `exp` field, consider it expired
+  } catch {
+    return true; // If decoding fails, consider it expired
+  }
+};
+
 export const UserProvider = ({ children }: { children: ReactNode }) => {
   const [isLogged, setIsLogged] = useState<boolean>(false);
 
-  useEffect(() => {
+  const validateToken = () => {
     const token = localStorage.getItem('token');
-    setIsLogged(!!token);
+    if (!token || isTokenExpired(token)) {
+      logout();
+    } else {
+      setIsLogged(true);
+    }
+  };
+
+useEffect(() => {
+    validateToken();
+    const interval = setInterval(validateToken, 60 * 1000); // Check every minute
+    return () => clearInterval(interval);
   }, []);
 
   const login = (token: string) => {
@@ -36,7 +60,7 @@ export const UserProvider = ({ children }: { children: ReactNode }) => {
   const fetchUserData = async () => {
     try {
       const token = localStorage.getItem("token");
-      if (!token) {
+      if (!token || isTokenExpired(token)) {
         throw new Error("User not authenticated");
       }
 
@@ -48,6 +72,7 @@ export const UserProvider = ({ children }: { children: ReactNode }) => {
       });
 
       if (!response.ok) {
+        if (response.status === 401) logout(); // Handle unauthorized
         throw new Error("Failed to fetch user data.");
       }
 
@@ -58,6 +83,8 @@ export const UserProvider = ({ children }: { children: ReactNode }) => {
       return null;
     }
   };
+
+
 
   const updateUserDetails = async (userDetails: Partial<{ 
     email: string; 
