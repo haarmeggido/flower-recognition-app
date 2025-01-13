@@ -119,7 +119,7 @@ Ensure you have the following installed on your system:
 ### **Steps**  
 ### **Clone the repository**:  
    ```bash  
-   git clone https://github.com/your-username/flower-recognition-app.git  
+   git clone https://github.com/haarmeggido/flower-recognition-app.git  
    cd flower-recognition-app  
   ```
 
